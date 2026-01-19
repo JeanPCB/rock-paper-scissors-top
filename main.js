@@ -15,19 +15,8 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-   let choice = prompt("Type your play:\n1 - Rock\n2 - Paper\n3 - Scissors");
-   choice = Number(choice);
-   
-   switch (choice) {
-      case 1:
-         return "rock";
-      case 2:
-         return "paper";
-      case 3:
-         return "scissors";
-      default:
-         return "Invalid choice!";
-   }
+   const choice = prompt("Rock, paper or scissors?");
+   return choice;
 }
 
 function generateRandNum(includedMin, includedMax) {
