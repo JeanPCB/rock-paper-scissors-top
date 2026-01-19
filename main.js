@@ -1,3 +1,6 @@
+let humanScore = 0;
+let computerScore = 0;
+
 function getComputerChoice() {
    let randNum = generateRandNum(1, 9);
    if (randNum >= 1 && randNum <= 3) {
