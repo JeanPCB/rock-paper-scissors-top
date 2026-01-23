@@ -1,6 +1,66 @@
 let humanScore = 0;
 let computerScore = 0;
 
+function playRound(computerChoice, humanChoice) {
+   switch (computerChoice) {
+      case "rock":
+         if (humanChoice === "paper") {
+            humanScore++;
+            printResult(computerChoice, humanChoice, "win");
+         } else if (humanChoice === "scissors") {
+            computerScore++;
+            printResult(computerChoice, humanChoice, "lose");
+         } else {
+            printResult(computerChoice, humanChoice, "draw");
+         }
+         break;
+      
+      case "paper":
+         if (humanChoice === "scissors") {
+            humanScore++;
+            printResult(computerChoice, humanChoice, "win");
+         } else if (humanChoice === "rock") {
+            computerScore++;
+            printResult(computerChoice, humanChoice, "lose");
+         } else {
+            printResult(computerChoice, humanChoice, "draw");
+         }
+         break;
+      
+      case "scissors":
+         if (humanChoice === "rock") {
+            humanScore++;
+            printResult(computerChoice, humanChoice, "win");
+         } else if (humanChoice === "paper") {
+            computerScore++;
+            printResult(computerChoice, humanChoice, "lose");
+         } else {
+            printResult(computerChoice, humanChoice, "draw");
+         }
+         break;
+      
+      default:
+         return null;
+   }
+}
+
+function printResult(computerChoice, humanChoice, result) {
+   let resultPhrase = `You ${result}! ${humanChoice.charAt(0).toUpperCase() + humanChoice.slice(1)} beats ${computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1)}`;
+   
+   if (result === "draw") {
+      resultPhrase = "That's a draw...";
+   }
+
+   console.log(resultPhrase);
+   printScore();
+}
+
+function printScore() {
+   console.log("Human Score: " + humanScore);
+   console.log("Computer Score: " + computerScore);
+}
+
+
 function getComputerChoice() {
    let randNum = generateRandNum(1, 9);
    if (randNum >= 1 && randNum <= 3) {
