@@ -45,10 +45,12 @@ function playRound(computerChoice, humanChoice) {
 }
 
 function printResult(computerChoice, humanChoice, result) {
-   let resultPhrase = `You ${result}! ${humanChoice.charAt(0).toUpperCase() + humanChoice.slice(1)} beats ${computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1)}`;
-   
-   if (result === "draw") {
-      resultPhrase = "That's a draw...";
+   let resultPhrase = "That's a draw..."
+
+   if (result === "win") {
+      resultPhrase = `You ${result}! ${humanChoice.charAt(0).toUpperCase() + humanChoice.slice(1)} beats ${computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1)}`;
+   } else if (result === "lose") {
+      resultPhrase = `You ${result}! ${computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1)} beats ${humanChoice.charAt(0).toUpperCase() + humanChoice.slice(1)}`;
    }
 
    console.log(resultPhrase);
