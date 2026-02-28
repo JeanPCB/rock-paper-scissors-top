@@ -6,38 +6,38 @@
     <title>Jo-ken-po</title>
     <link rel="stylesheet" href="./css/main.css" />
   </head>
-  <body>
-    <header>
+  <body class="dflex al-center fdir-col gp-3 pd-4">
+    <header class="text-center">
       <h1>Jo-ken-po</h1>
       <p>
         <em>Or rock paper scissors, as you prefer...</em>
       </p>
     </header>
 
-    <main>
-      <section id="plays-ui">
-        <div id="player-container">
+    <main class="dflex fdir-col">
+      <section id="plays-ui" class="dflex text-center gp-5">
+        <div id="player-container" class="dflex fdir-col pd-4 gp-3">
           <h2>You</h2>
 
-          <div>
-            <p>?</p>
+          <div class="sel-play-display dflex al-center jf-center">
+            <p class="fs-3">?</p>
           </div>
         </div>
 
-        <div id="vs-sign">
-          <p>VS</p>
+        <div id="vs-sign" class="dflex fdir-col jf-center">
+          <p class="fs-2">x</p>
         </div>
 
-        <div id="computer-container">
+        <div id="computer-container" class="dflex fdir-col pd-4 gp-3">
           <h2>Computer</h2>
 
-          <div>
-            <p>?</p>
+          <div class="sel-play-display dflex al-center jf-center">
+            <p class="fs-3">?</p>
           </div>
         </div>
       </section>
 
-      <div>
+      <div id="plays-choices-container" class="dflex al-center jf-center gp-3">
         <button>Rock</button>
         <button>Paper</button>
         <button>Scissors</button>

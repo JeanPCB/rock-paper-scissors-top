@@ -15,4 +15,23 @@ img {
 body {
   line-height: 1.5;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+}
+
+/* Custom Styles */
+main {
+  min-width: 60%;
+}
+
+.sel-play-display {
+  flex: 0;
+  height: 60%;
+  aspect-ratio: 1;
+  background-color: gray;
+}
+
+#plays-choices-container > * {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 20px 30px;
 }
