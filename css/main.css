@@ -1,3 +1,5 @@
+@import url(./utilities.css);
+
 /* Soft CSS Reset */
 * {
   box-sizing: border-box;
@@ -12,5 +14,5 @@ img {
 
 body {
   line-height: 1.5;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }

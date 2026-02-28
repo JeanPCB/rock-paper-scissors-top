@@ -1,0 +1,136 @@
+/* Width */
+.w-100 {
+  width: 100%;
+}
+
+.w-90 {
+  width: 90%;
+}
+
+.w-80 {
+  width: 80%;
+}
+
+.w-70 {
+  width: 70%;
+}
+
+.w-60 {
+  width: 60%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+/* Alignment */
+.dflex {
+  display: flex;
+  flex: 1;
+}
+
+.jf-center {
+  justify-content: center;
+}
+
+.jf-space-bet {
+  justify-content: space-between;
+}
+
+.al-center {
+  align-items: center;
+}
+
+.fdir-col {
+  flex-direction: column;
+}
+
+.fdir-row {
+  flex-direction: row;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Spacing */
+.gp-1 {
+  gap: 1rem;
+}
+
+.gp-2 {
+  gap: 2rem;
+}
+
+.gp-3 {
+  gap: 3rem;
+}
+
+.gp-4 {
+  gap: 4rem;
+}
+
+.gp-5 {
+  gap: 5rem;
+}
+
+.pd-1 {
+  padding: 1rem;
+}
+
+.pd-2 {
+  padding: 2rem;
+}
+
+.pd-3 {
+  padding: 3rem;
+}
+
+.pd-4 {
+  padding: 4rem;
+}
+
+.pd-5 {
+  padding: 5rem;
+}
+
+.mg-1 {
+  margin: 10px;
+}
+
+.mg-2 {
+  margin: 20px;
+}
+
+.mg-3 {
+  margin: 30px;
+}
+
+.mg-4 {
+  margin: 40px;
+}
+
+.mg-5 {
+  margin: 50px;
+}
+
+/* Font-sizes */
+.fs-1 {
+  font-size: 1rem;
+}
+
+.fs-2 {
+  font-size: 2rem;
+}
+
+.fs-3 {
+  font-size: 3rem;
+}
+
+.fs-4 {
+  font-size: 4rem;
+}
+
+.fs-5 {
+  font-size: 5rem;
+}
