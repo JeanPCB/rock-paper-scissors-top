@@ -27,7 +27,8 @@ main {
   flex: 0;
   width: 70%;
   aspect-ratio: 1;
-  background-color: gray;
+  background-color: rgba(128, 128, 128, 0.288);
+  border-radius: 10px;
 }
 
 .score-display {
