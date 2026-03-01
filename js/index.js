@@ -1,9 +1,22 @@
-import { playsBtns } from "./events";
+import { playsBtns, setPlayDisplay } from "./uiEvents.js";
+
+const playerDisplayContent = document.querySelector("#player-play-display");
+const computerDisplayContent = document.querySelector("#computer-play-display");
 
 function playGame() {
-  console.log(playsBtns);
   let humanScore = 0;
   let computerScore = 0;
+
+  playsBtns.forEach((playBtn) =>
+    playBtn.addEventListener("click", () => {
+      const humanPlay = getHumanChoice(playBtn);
+      const computerPlay = getComputerChoice();
+
+      playRound(computerPlay, humanPlay);
+      setPlayDisplay(humanPlay, playerDisplayContent);
+      setPlayDisplay(computerPlay, computerDisplayContent);
+    }),
+  );
 
   function playRound(computerChoice, humanChoice) {
     switch (computerChoice) {
@@ -85,8 +98,8 @@ function playGame() {
     }
   }
 
-  function getHumanChoice() {
-    const choice = prompt("Rock, paper or scissors?").toLowerCase();
+  function getHumanChoice(button) {
+    const choice = button.textContent.toLowerCase();
     return choice;
   }
 
@@ -94,3 +107,5 @@ function playGame() {
     return Math.floor(Math.random() * (includedMax - includedMin + 1)) + 1;
   }
 }
+
+playGame();
