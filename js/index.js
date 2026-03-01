@@ -1,6 +1,7 @@
-"use strict";
+import { playsBtns } from "./events";
 
 function playGame() {
+  console.log(playsBtns);
   let humanScore = 0;
   let computerScore = 0;
 
