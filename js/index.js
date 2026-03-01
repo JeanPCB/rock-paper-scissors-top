@@ -90,8 +90,4 @@ function playGame() {
   function generateRandNum(includedMin, includedMax) {
     return Math.floor(Math.random() * (includedMax - includedMin + 1)) + 1;
   }
-
-  for (let i = 0; i < 5; i++) {
-    playRound(getComputerChoice(), getHumanChoice());
-  }
 }
