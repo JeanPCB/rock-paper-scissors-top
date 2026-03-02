@@ -43,12 +43,18 @@ main {
   font-size: 1.5rem;
 }
 
-#plays-choices-container > * {
+#plays-choices-container button {
+  color: var(--primary-color);
+  background-color: var(--secondary-bg-color);
   font-size: 1.2rem;
   font-weight: 600;
   padding: 10px 20px;
-  background-color: var(--secondary-bg-color);
-  color: var(--primary-color);
+  border: none;
+  border-radius: 10px;
+}
+
+#plays-choices-container button:hover {
+  cursor: pointer;
 }
 
 #plays-ui > *:not(#vs-sign) {
