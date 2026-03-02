@@ -21,3 +21,7 @@ export function setPlayDisplay(play, display) {
       break;
   }
 }
+
+export function updateScoreDisplay(display, score) {
+  display.textContent = score;
+}

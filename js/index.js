@@ -1,9 +1,12 @@
-import { playsBtns, setPlayDisplay } from "./uiEvents.js";
+import { playsBtns, setPlayDisplay, updateScoreDisplay } from "./uiEvents.js";
 
 const playerDisplayContent = document.querySelector("#player-play-display");
 const computerDisplayContent = document.querySelector("#computer-play-display");
 
-let humanScore = 0;
+const playerScoreDisplay = document.querySelector("#score-player");
+const computerScoreDisplay = document.querySelector("#score-computer");
+
+let playerScore = 0;
 let computerScore = 0;
 
 playsBtns.forEach((playBtn) =>
@@ -14,6 +17,8 @@ playsBtns.forEach((playBtn) =>
     playRound(computerPlay, humanPlay);
     setPlayDisplay(humanPlay, playerDisplayContent);
     setPlayDisplay(computerPlay, computerDisplayContent);
+    updateScoreDisplay(playerScoreDisplay, playerScore);
+    updateScoreDisplay(computerScoreDisplay, computerScore);
   }),
 );
 
@@ -21,7 +26,7 @@ function playRound(computerChoice, humanChoice) {
   switch (computerChoice) {
     case "rock":
       if (humanChoice === "paper") {
-        humanScore++;
+        playerScore++;
         printResult(computerChoice, humanChoice, "win");
       } else if (humanChoice === "scissors") {
         computerScore++;
@@ -33,7 +38,7 @@ function playRound(computerChoice, humanChoice) {
 
     case "paper":
       if (humanChoice === "scissors") {
-        humanScore++;
+        playerScore++;
         printResult(computerChoice, humanChoice, "win");
       } else if (humanChoice === "rock") {
         computerScore++;
@@ -45,7 +50,7 @@ function playRound(computerChoice, humanChoice) {
 
     case "scissors":
       if (humanChoice === "rock") {
-        humanScore++;
+        playerScore++;
         printResult(computerChoice, humanChoice, "win");
       } else if (humanChoice === "paper") {
         computerScore++;
@@ -80,7 +85,7 @@ function printResult(computerChoice, humanChoice, result) {
 }
 
 function printScore() {
-  console.log("Human Score: " + humanScore);
+  console.log("Human Score: " + playerScore);
   console.log("Computer Score: " + computerScore);
 }
 
