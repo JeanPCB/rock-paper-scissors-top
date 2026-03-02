@@ -27,36 +27,24 @@ function playRound(computerChoice, humanChoice) {
     case "rock":
       if (humanChoice === "paper") {
         playerScore++;
-        printResult(computerChoice, humanChoice, "win");
       } else if (humanChoice === "scissors") {
         computerScore++;
-        printResult(computerChoice, humanChoice, "lose");
-      } else {
-        printResult(computerChoice, humanChoice, "draw");
       }
       break;
 
     case "paper":
       if (humanChoice === "scissors") {
         playerScore++;
-        printResult(computerChoice, humanChoice, "win");
       } else if (humanChoice === "rock") {
         computerScore++;
-        printResult(computerChoice, humanChoice, "lose");
-      } else {
-        printResult(computerChoice, humanChoice, "draw");
       }
       break;
 
     case "scissors":
       if (humanChoice === "rock") {
         playerScore++;
-        printResult(computerChoice, humanChoice, "win");
       } else if (humanChoice === "paper") {
         computerScore++;
-        printResult(computerChoice, humanChoice, "lose");
-      } else {
-        printResult(computerChoice, humanChoice, "draw");
       }
       break;
 
