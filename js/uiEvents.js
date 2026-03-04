@@ -83,6 +83,7 @@ function finalResultUi(playerScore, computerScore) {
   div.classList = "dflex fdir-col gp-1 text-center";
   p.style.fontSize = "1.5rem";
   retryBtn.textContent = "Try Again";
+  retryBtn.addEventListener("click", () => location.reload());
 
   if (playerScore === 5) {
     p.textContent = "You Win!";
