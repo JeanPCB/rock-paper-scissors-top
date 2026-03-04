@@ -31,7 +31,7 @@ export function setLastPlaysDisplay(play, display, playsCounter) {
     display.textContent = "";
   }
 
-  if (playsCounter === 6 || playsCounter === 11) {
+  if (playsCounter > 1 && playsCounter % 5 === 1) {
     display.innerHTML += "<br>";
   }
 
