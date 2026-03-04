@@ -3,6 +3,7 @@ import {
   setPlayDisplay,
   updateScoreDisplay,
   showFinalResult,
+  setLastPlaysDisplay,
 } from "./uiEvents.js";
 
 const playerDisplayContent = document.querySelector("#player-play-display");
@@ -11,8 +12,12 @@ const computerDisplayContent = document.querySelector("#computer-play-display");
 const playerScoreDisplay = document.querySelector("#score-player");
 const computerScoreDisplay = document.querySelector("#score-computer");
 
+const playerLastPlayDp = document.querySelector("#player-last-plays");
+const computerLastPlayDp = document.querySelector("#computer-last-plays");
+
 let playerScore = 0;
 let computerScore = 0;
+let playsCounter = 0;
 
 playsBtns.forEach((playBtn) =>
   playBtn.addEventListener("click", () => {
@@ -20,10 +25,16 @@ playsBtns.forEach((playBtn) =>
     const computerPlay = getComputerChoice();
 
     playRound(computerPlay, humanPlay);
+
     setPlayDisplay(humanPlay, playerDisplayContent);
     setPlayDisplay(computerPlay, computerDisplayContent);
+
     updateScoreDisplay(playerScoreDisplay, playerScore);
     updateScoreDisplay(computerScoreDisplay, computerScore);
+
+    setLastPlaysDisplay(humanPlay, playerLastPlayDp, playsCounter);
+    setLastPlaysDisplay(computerPlay, computerLastPlayDp, playsCounter);
+
     showFinalResult(playerScore, computerScore);
   }),
 );
@@ -57,11 +68,8 @@ function playRound(computerChoice, humanChoice) {
     default:
       return null;
   }
-}
 
-function printScore() {
-  console.log("Human Score: " + playerScore);
-  console.log("Computer Score: " + computerScore);
+  playsCounter++;
 }
 
 function getComputerChoice() {
