@@ -2,6 +2,16 @@
 
 Um pequeno projeto de aprendizado em navegador que implementa o clássico jogo Pedra–Papel–Tesoura usando HTML, CSS e JavaScript puros.
 
+## Demo
+
+![Gameplay Demo](assets/demo.gif)
+
+> Exemplo de uma partida mostrando interações e atualização de pontuação.
+
+Live preview: https://jo-ken-p.netlify.app/
+
+---
+
 ## Sobre
 
 Este projeto foi criado para praticar manipulação do DOM, tratamento de eventos e conceitos fundamentais de JavaScript.
