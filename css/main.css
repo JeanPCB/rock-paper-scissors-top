@@ -43,12 +43,16 @@ main {
   justify-content: space-evenly;
 }
 
+.score-display {
+  font-size: 1.5rem;
+}
+
 .last-plays {
   font-size: 1.2rem;
 }
 
-.score-display {
-  font-size: 1.5rem;
+.last-plays > p > * {
+  margin: 5px;
 }
 
 #plays-choices-container {
