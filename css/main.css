@@ -39,12 +39,16 @@ main {
   border-radius: 10px;
 }
 
-.score-display {
-  font-size: 1.5rem;
-}
-
 #plays-ui > *:not(#vs-sign) {
   justify-content: space-evenly;
+}
+
+.last-plays {
+  font-size: 1.2rem;
+}
+
+.score-display {
+  font-size: 1.5rem;
 }
 
 #plays-choices-container {
