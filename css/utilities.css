@@ -134,3 +134,14 @@
 .fs-5 {
   font-size: 5rem;
 }
+
+/* Visibility */
+.vb-hidden {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.vb-show {
+  opacity: 1;
+  pointer-events: auto;
+}
