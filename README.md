@@ -1,4 +1,4 @@
-# Pedra Papel Tesoura
+# "Jo-ken-Po"
 
 Um pequeno projeto de aprendizado em navegador que implementa o clássico jogo Pedra–Papel–Tesoura usando HTML, CSS e JavaScript puros.
 
