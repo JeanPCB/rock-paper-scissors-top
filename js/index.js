@@ -1,4 +1,9 @@
-import { playsBtns, setPlayDisplay, updateScoreDisplay } from "./uiEvents.js";
+import {
+  playsBtns,
+  setPlayDisplay,
+  updateScoreDisplay,
+  showFinalResult,
+} from "./uiEvents.js";
 
 const playerDisplayContent = document.querySelector("#player-play-display");
 const computerDisplayContent = document.querySelector("#computer-play-display");
@@ -19,6 +24,7 @@ playsBtns.forEach((playBtn) =>
     setPlayDisplay(computerPlay, computerDisplayContent);
     updateScoreDisplay(playerScoreDisplay, playerScore);
     updateScoreDisplay(computerScoreDisplay, computerScore);
+    showFinalResult(playerScore, computerScore);
   }),
 );
 
