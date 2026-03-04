@@ -1,58 +1,40 @@
-# Rock Paper Scissors
+# Pedra Papel Tesoura
 
-A small, browser-based learning project implementing the classic Rock–Paper–Scissors game using plain HTML, CSS and JavaScript.
+Um pequeno projeto de aprendizado em navegador que implementa o clássico jogo Pedra–Papel–Tesoura usando HTML, CSS e JavaScript puros.
 
-## About
+## Sobre
 
-This project was built while learning with The Odin Project to practice DOM manipulation, event handling and core JavaScript concepts.
+Este projeto foi criado para praticar manipulação do DOM, tratamento de eventos e conceitos fundamentais de JavaScript.
 
-## Features
+## Funcionalidades
 
-- Single-player game against a computer opponent.
-- Session score tracking (resets on page reload).
-- Simple responsive UI and basic animations.
-- Clear separation between markup, styles and logic.
+- Jogo para um jogador contra o computador.
+- Controle de pontuação na sessão (reinicia ao recarregar a página).
+- Interface simples e responsiva com animações básicas.
+- Separação clara entre marcação, estilos e lógica.
 
-## Project files
+## Arquivos do projeto
 
-- `index.html` — main page and game markup
-- `css/main.css` — primary styles
-- `css/utilities.css` — utility classes
-- `js/index.js` — game logic
-- `js/uiEvents.js` — UI event handlers
+- `index.html` — página principal e marcação do jogo
+- `css/main.css` — estilos principais
+- `css/utilities.css` — classes utilitárias
+- `js/index.js` — lógica do jogo
+- `js/uiEvents.js` — manipuladores de eventos da UI
 
-## How to run
-
-1. Open `index.html` in your browser (double-click or use "Open File").
-2. Or serve the folder with a simple HTTP server and open `http://localhost:8000`:
-
-```bash
-python3 -m http.server 8000
-# then open http://localhost:8000 in your browser
-```
-
-## Skills practiced
+## Habilidades praticadas
 
 ### JavaScript
 
-- Writing well-defined functions and organizing logic
-- Function nesting and understanding scope
-- Simple state (score counters) and control flow (switch/case)
-- String methods and iteration patterns
+- Escrita de funções bem definidas e organização da lógica
+- Aninhamento de funções e compreensão de escopo
+- Estado simples (contadores de pontuação) e controle de fluxo (switch/case)
+- Métodos de string e padrões de iteração
 
 ### Git & GitHub
 
-- Basic version control workflows (commits, reset/revert)
-- Managing remote repository and README synchronization
+- Fluxos básicos de controle de versão (commits, reset/revert)
+- Gerenciamento do repositório remoto e sincronização do README
 
-## Motivation
+## Motivação
 
-This project helped reinforce core JavaScript concepts (functions, scope, event loop) and practical frontend skills like DOM updates and UI event handling.
-
-## Next steps / ideas
-
-- Persist high scores using `localStorage`.
-- Improve the computer AI or add difficulty levels.
-- Add two-player mode, animations, or unit tests.
-
-Enjoy experimenting — it's a simple learning exercise to build on.
+Este projeto ajudou a reforçar conceitos fundamentais de JavaScript (funções, escopo) e habilidades práticas de frontend, como atualização do DOM e tratamento de eventos.
