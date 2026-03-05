@@ -63,8 +63,6 @@ function playRound(computerChoice, humanChoice) {
     default:
       return null;
   }
-
-  playsCounter++;
 }
 
 function getComputerChoice() {
