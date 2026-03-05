@@ -7,23 +7,30 @@ const choicesButtons = document.querySelectorAll(
 );
 
 export function setPlayDisplay(play, display) {
-  switch (play) {
-    case "rock":
-      display.innerHTML = '<i class="fa-solid fa-hand-back-fist"></i>';
-      break;
+  const timeBase = 1000;
+  display.textContent = "JO";
 
-    case "paper":
-      display.innerHTML = '<i class="fa-solid fa-hand"></i>';
-      break;
+  setTimeout(() => (display.textContent = "KEN"), timeBase);
 
-    case "scissors":
-      display.innerHTML = '<i class="fa-solid fa-hand-scissors"></i>';
-      break;
+  setTimeout(() => {
+    switch (play) {
+      case "rock":
+        display.innerHTML = '<i class="fa-solid fa-hand-back-fist"></i>';
+        break;
 
-    default:
-      display.textContent = "ERROR";
-      break;
-  }
+      case "paper":
+        display.innerHTML = '<i class="fa-solid fa-hand"></i>';
+        break;
+
+      case "scissors":
+        display.innerHTML = '<i class="fa-solid fa-hand-scissors"></i>';
+        break;
+
+      default:
+        display.textContent = "ERROR";
+        break;
+    }
+  }, timeBase * 2);
 }
 
 export function setPlayDisplayColor(display, color) {

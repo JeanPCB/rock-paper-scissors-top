@@ -19,14 +19,30 @@ playsBtns.forEach((playBtn) =>
   playBtn.addEventListener("click", () => {
     const humanPlay = getHumanChoice(playBtn);
     const computerPlay = getComputerChoice();
+    const winner = playRound(computerPlay, humanPlay);
+    const ANIMATION_DURATION = 2000;
 
-    playRound(computerPlay, humanPlay);
+    setPlayDisplayColor(computerDisplayContent, "white");
+    setPlayDisplayColor(playerDisplayContent, "white");
 
     setPlayDisplay(humanPlay, playerDisplayContent);
     setPlayDisplay(computerPlay, computerDisplayContent);
 
-    updateScoreDisplay(playerScoreDisplay, playerScore);
-    updateScoreDisplay(computerScoreDisplay, computerScore);
+    setTimeout(() => {
+      if (winner === "player") {
+        setPlayDisplayColor(playerDisplayContent, "lightgreen");
+        setPlayDisplayColor(computerDisplayContent, "crimson");
+      } else if (winner === "computer") {
+        setPlayDisplayColor(computerDisplayContent, "lightgreen");
+        setPlayDisplayColor(playerDisplayContent, "crimson");
+      } else {
+        setPlayDisplayColor(computerDisplayContent, "white");
+        setPlayDisplayColor(playerDisplayContent, "white");
+      }
+
+      updateScoreDisplay(playerScoreDisplay, playerScore);
+      updateScoreDisplay(computerScoreDisplay, computerScore);
+    }, ANIMATION_DURATION);
 
     showFinalResult(playerScore, computerScore);
   }),
@@ -70,16 +86,7 @@ function playRound(computerChoice, humanChoice) {
       return null;
   }
 
-  if (winner === "player") {
-    setPlayDisplayColor(playerDisplayContent, "lightgreen");
-    setPlayDisplayColor(computerDisplayContent, "crimson");
-  } else if (winner === "computer") {
-    setPlayDisplayColor(computerDisplayContent, "lightgreen");
-    setPlayDisplayColor(playerDisplayContent, "crimson");
-  } else {
-    setPlayDisplayColor(computerDisplayContent, "white");
-    setPlayDisplayColor(playerDisplayContent, "white");
-  }
+  return winner;
 }
 
 function getComputerChoice() {
