@@ -41,23 +41,25 @@ export function updateScoreDisplay(display, score) {
   display.textContent = score;
 }
 
-export function showFinalResult(playerScore, computerScore) {
-  if (isGameEnd(playerScore, computerScore)) {
-    const resultPar = finalResultUi(playerScore, computerScore);
+export function showFinalResult(playerScore, computerScore, roundLimit) {
+  if (isGameEnd(playerScore, computerScore, roundLimit)) {
+    const resultPar = finalResultUi(playerScore, computerScore, roundLimit);
     hideChoicesBtns(playerScore, computerScore);
     choicesContainer.appendChild(resultPar);
   }
 }
 
-function isGameEnd(playerScore, computerScore) {
-  return playerScore === 5 || computerScore === 5 ? true : false;
+function isGameEnd(playerScore, computerScore, roundLimit) {
+  return playerScore === roundLimit || computerScore === roundLimit
+    ? true
+    : false;
 }
 
 function hideChoicesBtns() {
   choicesButtons.forEach((el) => el.classList.toggle("vb-hidden"));
 }
 
-function finalResultUi(playerScore, computerScore) {
+function finalResultUi(playerScore, computerScore, roundLimit) {
   const div = document.createElement("div");
   const p = document.createElement("p");
   const retryBtn = document.createElement("button");
@@ -68,9 +70,9 @@ function finalResultUi(playerScore, computerScore) {
   retryBtn.textContent = "Try Again";
   retryBtn.addEventListener("click", () => location.reload());
 
-  if (playerScore === 5) {
+  if (playerScore === roundLimit) {
     p.textContent = "You Win!";
-  } else if (computerScore === 5) {
+  } else if (computerScore === roundLimit) {
     p.textContent = "You Lose :(";
   }
 

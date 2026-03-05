@@ -42,9 +42,9 @@ playsBtns.forEach((playBtn) =>
 
       updateScoreDisplay(playerScoreDisplay, playerScore);
       updateScoreDisplay(computerScoreDisplay, computerScore);
-    }, ANIMATION_DURATION);
 
-    showFinalResult(playerScore, computerScore);
+      showFinalResult(playerScore, computerScore, 3);
+    }, ANIMATION_DURATION);
   }),
 );
 
