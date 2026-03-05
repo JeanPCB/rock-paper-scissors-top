@@ -3,7 +3,6 @@ import {
   setPlayDisplay,
   updateScoreDisplay,
   showFinalResult,
-  setLastPlaysDisplay,
 } from "./uiEvents.js";
 
 const playerDisplayContent = document.querySelector("#player-play-display");
@@ -17,7 +16,6 @@ const computerLastPlayDp = document.querySelector("#computer-last-plays");
 
 let playerScore = 0;
 let computerScore = 0;
-let playsCounter = 0;
 
 playsBtns.forEach((playBtn) =>
   playBtn.addEventListener("click", () => {
@@ -31,9 +29,6 @@ playsBtns.forEach((playBtn) =>
 
     updateScoreDisplay(playerScoreDisplay, playerScore);
     updateScoreDisplay(computerScoreDisplay, computerScore);
-
-    setLastPlaysDisplay(humanPlay, playerLastPlayDp, playsCounter);
-    setLastPlaysDisplay(computerPlay, computerLastPlayDp, playsCounter);
 
     showFinalResult(playerScore, computerScore);
   }),

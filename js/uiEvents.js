@@ -26,34 +26,6 @@ export function setPlayDisplay(play, display) {
   }
 }
 
-export function setLastPlaysDisplay(play, display, playsCounter) {
-  if (playsCounter === 1) {
-    display.textContent = "";
-  }
-
-  if (playsCounter > 1 && playsCounter % 5 === 1) {
-    display.innerHTML += "<br>";
-  }
-
-  switch (play) {
-    case "rock":
-      display.innerHTML += '<i class="fa-solid fa-hand-back-fist"></i>';
-      break;
-
-    case "paper":
-      display.innerHTML += '<i class="fa-solid fa-hand"></i>';
-      break;
-
-    case "scissors":
-      display.innerHTML += '<i class="fa-solid fa-hand-scissors"></i>';
-      break;
-
-    default:
-      display.textContent += "ERROR";
-      break;
-  }
-}
-
 export function updateScoreDisplay(display, score) {
   display.textContent = score;
 }
