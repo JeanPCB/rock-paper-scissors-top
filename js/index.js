@@ -57,31 +57,31 @@ function playRound(computerChoice, humanChoice) {
   let winner = null;
 
   switch (computerChoice) {
-    case "rock":
-      if (humanChoice === "paper") {
+    case "pedra":
+      if (humanChoice === "papel") {
         winner = "player";
         playerScore++;
-      } else if (humanChoice === "scissors") {
+      } else if (humanChoice === "tesoura") {
         winner = "computer";
         computerScore++;
       }
       break;
 
-    case "paper":
-      if (humanChoice === "scissors") {
+    case "papel":
+      if (humanChoice === "tesoura") {
         winner = "player";
         playerScore++;
-      } else if (humanChoice === "rock") {
+      } else if (humanChoice === "pedra") {
         winner = "computer";
         computerScore++;
       }
       break;
 
-    case "scissors":
-      if (humanChoice === "rock") {
+    case "tesoura":
+      if (humanChoice === "pedra") {
         winner = "player";
         playerScore++;
-      } else if (humanChoice === "paper") {
+      } else if (humanChoice === "papel") {
         winner = "computer";
         computerScore++;
       }
@@ -97,11 +97,11 @@ function playRound(computerChoice, humanChoice) {
 function getComputerChoice() {
   let randNum = generateRandNum(1, 9);
   if (randNum >= 1 && randNum <= 3) {
-    return "rock";
+    return "pedra";
   } else if (randNum >= 4 && randNum <= 6) {
-    return "paper";
+    return "papel";
   } else if (randNum >= 7 && randNum <= 9) {
-    return "scissors";
+    return "tesoura";
   } else {
     return "Invalid input!";
   }

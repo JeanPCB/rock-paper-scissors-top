@@ -14,15 +14,15 @@ export function setPlayDisplay(play, display) {
 
   setTimeout(() => {
     switch (play) {
-      case "rock":
+      case "pedra":
         display.innerHTML = '<i class="fa-solid fa-hand-back-fist"></i>';
         break;
 
-      case "paper":
+      case "papel":
         display.innerHTML = '<i class="fa-solid fa-hand"></i>';
         break;
 
-      case "scissors":
+      case "tesoura":
         display.innerHTML = '<i class="fa-solid fa-hand-scissors"></i>';
         break;
 
@@ -75,13 +75,13 @@ function finalResultUi(playerScore, computerScore, roundLimit) {
   div.id = "result-div";
   div.classList = "dflex fdir-col gp-1 text-center";
   p.style.fontSize = "1.5rem";
-  retryBtn.textContent = "Try Again";
+  retryBtn.textContent = "Jogar Novamente";
   retryBtn.addEventListener("click", () => location.reload());
 
   if (playerScore === roundLimit) {
-    p.textContent = "You Win!";
+    p.textContent = "Você Ganhou!";
   } else if (computerScore === roundLimit) {
-    p.textContent = "You Lose :(";
+    p.textContent = "Você perdeu...";
   }
 
   div.appendChild(p);
