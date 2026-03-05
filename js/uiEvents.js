@@ -49,6 +49,14 @@ export function showFinalResult(playerScore, computerScore, roundLimit) {
   }
 }
 
+export function toggleBtnDisabled(button) {
+  if (button.disabled) {
+    button.disabled = false;
+  } else if (!button.disabled) {
+    button.disabled = true;
+  }
+}
+
 function isGameEnd(playerScore, computerScore, roundLimit) {
   return playerScore === roundLimit || computerScore === roundLimit
     ? true

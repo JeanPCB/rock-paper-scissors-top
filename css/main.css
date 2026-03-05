@@ -73,6 +73,12 @@ main {
   cursor: pointer;
 }
 
+#plays-choices-container button:disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+  color: #666;
+}
+
 #result-div {
   position: absolute;
   font-size: 1.2rem;

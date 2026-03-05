@@ -4,6 +4,7 @@ import {
   setPlayDisplayColor,
   updateScoreDisplay,
   showFinalResult,
+  toggleBtnDisabled,
 } from "./uiEvents.js";
 
 const playerDisplayContent = document.querySelector("#player-play-display");
@@ -15,8 +16,10 @@ const computerScoreDisplay = document.querySelector("#score-computer");
 let playerScore = 0;
 let computerScore = 0;
 
-playsBtns.forEach((playBtn) =>
+playsBtns.forEach((playBtn, _, buttons) =>
   playBtn.addEventListener("click", () => {
+    buttons.forEach((button) => toggleBtnDisabled(button));
+
     const humanPlay = getHumanChoice(playBtn);
     const computerPlay = getComputerChoice();
     const winner = playRound(computerPlay, humanPlay);
@@ -42,6 +45,8 @@ playsBtns.forEach((playBtn) =>
 
       updateScoreDisplay(playerScoreDisplay, playerScore);
       updateScoreDisplay(computerScoreDisplay, computerScore);
+
+      buttons.forEach((button) => toggleBtnDisabled(button));
 
       showFinalResult(playerScore, computerScore, 3);
     }, ANIMATION_DURATION);
