@@ -1,6 +1,7 @@
 import {
   playsBtns,
   setPlayDisplay,
+  setPlayDisplayColor,
   updateScoreDisplay,
   showFinalResult,
 } from "./uiEvents.js";
@@ -10,9 +11,6 @@ const computerDisplayContent = document.querySelector("#computer-play-display");
 
 const playerScoreDisplay = document.querySelector("#score-player");
 const computerScoreDisplay = document.querySelector("#score-computer");
-
-const playerLastPlayDp = document.querySelector("#player-last-plays");
-const computerLastPlayDp = document.querySelector("#computer-last-plays");
 
 let playerScore = 0;
 let computerScore = 0;
@@ -35,33 +33,52 @@ playsBtns.forEach((playBtn) =>
 );
 
 function playRound(computerChoice, humanChoice) {
+  let winner = null;
+
   switch (computerChoice) {
     case "rock":
       if (humanChoice === "paper") {
+        winner = "player";
         playerScore++;
       } else if (humanChoice === "scissors") {
+        winner = "computer";
         computerScore++;
       }
       break;
 
     case "paper":
       if (humanChoice === "scissors") {
+        winner = "player";
         playerScore++;
       } else if (humanChoice === "rock") {
+        winner = "computer";
         computerScore++;
       }
       break;
 
     case "scissors":
       if (humanChoice === "rock") {
+        winner = "player";
         playerScore++;
       } else if (humanChoice === "paper") {
+        winner = "computer";
         computerScore++;
       }
       break;
 
     default:
       return null;
+  }
+
+  if (winner === "player") {
+    setPlayDisplayColor(playerDisplayContent, "lightgreen");
+    setPlayDisplayColor(computerDisplayContent, "crimson");
+  } else if (winner === "computer") {
+    setPlayDisplayColor(computerDisplayContent, "lightgreen");
+    setPlayDisplayColor(playerDisplayContent, "crimson");
+  } else {
+    setPlayDisplayColor(computerDisplayContent, "white");
+    setPlayDisplayColor(playerDisplayContent, "white");
   }
 }
 

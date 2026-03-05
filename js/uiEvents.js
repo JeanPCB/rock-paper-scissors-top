@@ -26,6 +26,10 @@ export function setPlayDisplay(play, display) {
   }
 }
 
+export function setPlayDisplayColor(display, color) {
+  display.style.color = color;
+}
+
 export function updateScoreDisplay(display, score) {
   display.textContent = score;
 }
